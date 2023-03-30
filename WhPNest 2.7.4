@@ -1,0 +1,414 @@
+# ▄██     ██▄      ▄██    ██▄        ▄███████▄        ███▄▄▄▄        ▄████████     ▄████████       ▄███     
+# ███     ███      ███    ███        ███    ███       ███▀▀▀██▄     ███    ███    ███    ███    ▀█████████▄ 
+# ███     ███      ███    ███        ███    ███       ███   ███     ███    █▀     ███    █▀        ▀███▀▀██ 
+# ███     ███     ▄███▄▄▄▄███▄▄      ███    ███       ███   ███    ▄███▄▄▄        ███               ███   ▀ 
+# ███     ███    ▀▀███▀▀▀▀███▀     ▀█████████▀        ███   ███   ▀▀███▀▀▀        ▀██████████       ███     
+# ███     ███      ███    ███        ███              ███   ███     ███    █▄             ███       ███     
+# ███ ▄█▄ ███      ███    ███        ███              ███   ███     ███    ███      ▄█    ███       ███     
+#  ▀███▀███▀       ▀██    ██▀      ▄█████▀            ▀██   ██▀     ██████████    ▄████████▀      ▄█████▀   
+
+# Copyright © - 2023-2023 - WhPDev (Whip3k)
+
+import webbrowser
+import subprocess
+import time
+
+#INFO DO LOGOWANIA
+
+def login():
+   
+   uzytkownicy = {
+               'Developer': {
+                   'haslo': 'au3rd54dev',
+                   'grupa': 'DEVELOPER',
+
+               },'Tester': {
+                  
+                   'haslo': 'au3rd54t',
+                   'grupa': 'TESTER'
+
+               },'Admin': {
+                   
+                   'haslo': 'au3rd54',
+                   'grupa': 'ADMIN'
+
+               },'Moderator': {
+                   'haslo': 'au3rd54m',
+                   'grupa': 'MODERATOR'
+
+               },'guest': {
+                   'haslo': '',
+                   'grupa': 'GUEST',
+              
+               },'Whip3k': {
+                   'haslo': 'au3rd54whpdev',
+                   'grupa': 'OWNER (Whip3k)',
+               }
+               }
+
+   
+#LOGOWANIE
+
+   login_nazwa_uzytkownika = input("Podaj nazwe uzytkownika: ")
+   
+   if login_nazwa_uzytkownika == 'guest':
+     print(' ')
+     print('Kliknij "ENTER"')
+     print(' ')
+   
+   login_haslo = input("Podaj haslo: ")
+   
+   while login_nazwa_uzytkownika not in uzytkownicy or uzytkownicy[login_nazwa_uzytkownika]['haslo'] != login_haslo:
+     print('  ')
+     print("Bledna nazwa uzytkownika lub haslo")
+     print('  ')
+     
+     login_nazwa_uzytkownika = input("Podaj nazwe uzytkownika: ")
+    
+     if login_nazwa_uzytkownika == 'guest':
+       print(' ')
+       print('Kliknij "ENTER"')
+       print(' ')     
+    
+     login_haslo = input("Podaj haslo: ")
+
+   grupa_uzytkownika = uzytkownicy[login_nazwa_uzytkownika]['grupa']
+   
+   for i in range(100):
+     print(" ")
+   
+   print(' ')
+   print("Udalo Ci sie zalogowac jako: {}".format(grupa_uzytkownika))
+   print('  ')
+   wersja = "2.7.4"
+   
+   print(" ")
+   print("       ▄██     ██▄      ▄██    ██▄        ▄███████▄        ███▄▄▄▄        ▄████████     ▄████████       ▄███     ")
+   print("       ███     ███      ███    ███        ███    ███       ███▀▀▀██▄     ███    ███    ███    ███    ▀█████████▄ ")
+   print("       ███     ███      ███    ███        ███    ███       ███   ███     ███    █▀     ███    █▀        ▀███▀▀██ ")
+   print("       ███     ███     ▄███▄▄▄▄███▄▄      ███    ███       ███   ███    ▄███▄▄▄        ███               ███   ▀ ")
+   print("       ███     ███    ▀▀███▀▀▀▀███▀     ▀█████████▀        ███   ███   ▀▀███▀▀▀        ▀██████████       ███     ")
+   print("       ███     ███      ███    ███        ███              ███   ███     ███    █▄             ███       ███     ")
+   print("       ███ ▄█▄ ███      ███    ███        ███              ███   ███     ███    ███      ▄█    ███       ███     ")
+   print("        ▀███▀███▀       ▀██    ██▀      ▄█████▀            ▀██   ██▀     ██████████    ▄████████▀      ▄█████▀   ")
+   print(" ") 
+   print("                                                                                                               By Whip3k") 
+   print(" ")
+   print("Witaj", login_nazwa_uzytkownika, "!")
+ 
+
+login()
+
+   
+#MENU
+
+def menu_start():
+   wersja = "2.7.4 "
+   print(' ')
+   print("Wybierz jedna z ponizszych opcji:") 
+   print("1. Wyswietl liste uzytkownikow")  
+   print("2. Otworz Google") 
+   print("3. Otworz OpenAi (Playground)")
+   print("4. Wyjdz")
+   print("5. Otworz gry")
+   print("6. Otwórz licznik liter")
+   print("7. Notatnik")
+   print("8. Kalkulator")
+   print("9. Ustawienia")
+  
+
+   print(' ')
+   wybór = input()
+   print(' ') 
+
+#LISTA OSÓB
+
+   if wybór == '1':              
+     print('  ')
+     print("Lista uzytkownikow systemu:") 
+     print(" ")
+     print('  - Developer (Owner (Whip3k) )')
+     print('  - Tester')
+     time.sleep(0.5)
+     menu_start()
+     
+                   
+#WYŁĄCZA WhPNest
+
+   elif wybór =='4':
+     print('  ') 
+     print("Do widzenia!") 
+     time.sleep(0.5)
+     exit()
+   
+#OTWIERA GOOGLE
+
+   elif wybór =='2':
+     
+     query = input("Co chcesz wyszukać?: ")
+
+     url = "https://www.google.com/search?q=" + query 
+    
+     time.sleep(0.5) 
+     print('Gotowe!')
+    
+     webbrowser.open(url)
+
+   elif wybór =='3':
+
+     print('Ładowanie...')
+     
+     time.sleep(2) 
+     print('Gotowe!')
+
+     webbrowser.open("https://platform.openai.com/playground")
+
+#OTWIERA MENU Z GRAMI
+   
+   elif wybór =='5':
+     print('Ładowanie...')
+     time.sleep(2)
+     
+     print(" ")
+     print(' ')
+     print("1. Otworz Roblox'a")
+     print("2. Otworz Minecraft'a")
+     print("3. Otworz Epic Games'a")
+     print("4. Otworz Steam'a")
+     print("5. Cofnij")
+     print(' ')
+     wybór2 = input()
+     print(' ')
+
+     if wybór2 =='1':
+       print('Ładowanie...')
+       time.sleep(2)
+       print('Gotowe!')
+
+       webbrowser.open("https://web.roblox.com")
+
+     elif wybór2 =='2':
+       print('Ładowanie...')
+       time.sleep(2)
+       print('Gotowe!')
+
+       subprocess.Popen(["C:\Program Files (x86)\MinecraftLauncher.exe"])
+
+     elif wybór2 =='3':
+       print('Ładowanie...')
+       time.sleep(2)
+       print('Gotowe!')
+   
+       subprocess.Popen(["C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win64\EpicGamesLauncher.exe"])
+
+     elif wybór2 =='4':
+       print('Ładowanie...')
+       time.sleep(2)
+       print('Gotowe!')
+
+       subprocess.Popen(["C:\Program Files (x86)\Steam\Steam.exe"])
+
+     elif wybór2 =='5':
+       menu_start()
+    
+     else:
+       print("Nieprawidlowy wybor! Spróbuj jeszcze raz.") 
+       print(' ')
+       menu_start()
+
+# Licznik liter i znaków specjalnych
+
+   elif wybór == '6':
+     tekst = input('Wpisz lub wklej tu swój test: ')
+
+     licznik = 0
+
+     for litera in tekst:
+        if litera.isalpha():
+          licznik += 1
+
+     print('Tekst zawiera', licznik, 'litery.')
+     print('  ')
+
+     
+
+     licznik_spec = 0
+
+     for znak in tekst:
+        if not znak.isalnum():
+          licznik_spec += 1
+
+     print('Tekst zawiera', licznik_spec, 'znaków specjalnych.')
+     print('  ')
+
+# Notatnik który się resetuje po ponownym uruchomieniu programu
+
+   elif wybór == '7':
+     
+     def wpisz_notatke():
+        global notatka
+        print(" ")
+        
+        notatka = input("Wpisz notatkę: ")
+        print(" ")
+
+     def wyswietl_notatke():
+
+        global notatka
+        print("Twoja notatka:", notatka)
+        print(" ")
+
+     while True:
+        
+        print("Co chcesz zrobić?")
+        print("1. Wpisać notatkę")
+        print("2. Wyświetlić notatkę")
+        print("3. Zakończyć program")
+        wybor = input("Wybierz opcję: ")
+        print(" ")
+        
+        if wybor == "1":
+          wpisz_notatke()
+        
+        elif wybor == "2":
+          wyswietl_notatke()
+        
+        elif wybor == "3":
+          time.sleep(0.5)
+          break
+          
+        else:
+          print("Nieprawidłowy wybór!")
+          time.sleep(2)
+
+        time.sleep(0.5)
+          
+# Kalkulator
+ 
+   elif wybór =='8':
+     def dodawanie(x, y):
+        return x + y
+
+     def odejmowanie(x, y):
+        return x - y
+     def mnozenie(x, y):
+        return x * y
+
+     def dzielenie(x, y):
+        return x / y
+
+     print("Co chcesz zrobić?:")
+     print("1. dodawanie")
+     print("2. odejmowanie")
+     print("3. mnozenie")
+     print("4. dzielenie")
+     print(" ")
+   
+     wybor = input("Wybierz opcje:")
+     print(" ")
+     
+     liczba1 = int(input("Wprowadz pierwsza liczbe: "))
+     print(" ")
+     
+     liczba2 = int(input("Wprowadz druga liczbe: "))
+     print(" ")
+     
+     if wybor == '1':
+       print(liczba1, "+", liczba2, "=", dodawanie(liczba1, liczba2))
+       print(" ")
+     
+     elif wybor == '2':
+       print(liczba1, "-", liczba2, "=", odejmowanie(liczba1, liczba2))
+       print(" ")
+     
+     elif wybor == '3':
+       print(liczba1, "*", liczba2, "=", mnozenie(liczba1, liczba2))
+       print(" ")
+     
+     elif wybor == '4':
+       print(liczba1, "/", liczba2, "=", dzielenie(liczba1, liczba2))
+       print(" ")
+     
+     else:
+       print("Niepoprawny wybor")
+       time.sleep(2)
+
+     time.sleep(2)
+
+# ChangeLog tego programu
+
+   elif wybór =='9':
+     
+     print("1. NestLog")
+     print("2. Zaloguj się ponownie")
+     print("3. Sprawdź aktualizacje")
+     print(" ")     
+     wybor2 = input("")
+     print(" ")
+     if wybor2 == '1':
+        
+       print('                                             NestLog')
+       print('  ')   
+       print("2.7.3 (2023-03-06)")
+       print("• Dodano:")
+       print('  ')
+       print('  - ChangeLog' )
+       print("  - Kalkulator")
+       print('  - Notatnik' )
+       print('  ')
+
+       print("• Zmiany:")
+       print('  ')
+       print("  - Lista Użytkowników (Usunięto administrację z listy)")
+       print(' ')
+     
+       print("• Bezpieczeństwo:")
+       print(' ')
+       print('  - Naprawiono logowanie i błąd z hasłami')
+       print(' ') 
+       
+       time.sleep(0.7)    
+
+       print("2.7.4 (2023-03-30)")
+       print("• Dodano:")
+       print('  ')
+       print('  - Konto "guest" (bez hasła)')
+       print('  - Pomoc w logowaniu na konto "guest"')
+       print('  - Funkcję sprawdzenia aktualizacji')
+       print('  - Została stworzona strona "whpnest.pl"!')
+       print('  ')
+     
+       print("• Zmiany:")
+       print('  ')
+       print('  - Nazwa została zmieniona na "WhPNest"')
+       print('  - Nazwa ChangeLoga została zmieniona na "NestLog"')
+       print("  - Wygląd NestLog'a (2x) ")
+       print("  - System przeglądarki")
+       print('  - Ponowne zalogowanie i NestLog został przeniesiony do zakładki "Ustawienia"')
+       print("  - Ulepszone Menu Startu!")
+       print(' ')
+     
+       print("• Bezpieczeństwo:")
+       print(' ')
+       print('  - Dodano konto "guest" by umożliwić osobom 3-ecim zalogowanie się do aplikacji bez potrzeby zaglądania w kod systemu')
+       print(' ') 
+       print(' ')
+       print('Aktualna wersja -', wersja)
+       print(' ')
+       time.sleep(2)
+    
+     if wybor2 == '2':
+       login()
+     
+     if wybor2 == '3':
+       webbrowser.open("http://whpnest.pl")
+  
+   else:
+     print("BŁĄD! NIE MA TAKIEJ OPCJI!")
+     time.sleep(0.5)
+
+   menu_start()
+
+   return menu_start()
+
+menu_start()
